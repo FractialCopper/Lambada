@@ -15,4 +15,5 @@ Project config
 -> include directory and library directory
 3. From the same window Linker -> Additional library directories , and Linker->Input-> and library name glfw3.lib.
 4. Add cpp files from imgui folder and glad.c for opengl.
-5. Build
+5. Remember to put glad.h include before glwf3.h. 
+6. Build
