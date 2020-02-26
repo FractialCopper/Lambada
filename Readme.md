@@ -6,8 +6,7 @@ opengl - for rendering purpouses
 
 glfw - for creating windows
 
-imgui - for sweet ui
-
+dear imgui - for sweet windows
 
 Project config
 1. Set project to x64. From build -> configuration manager.
