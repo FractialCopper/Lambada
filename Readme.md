@@ -1,14 +1,14 @@
 https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
 
-#The project will be based on:
+# The project will be based on:
 
--opengl - for rendering purpouses
+- opengl - for rendering purpouses
 
--glfw - for creating windows
+- glfw - for creating windows
 
--dear imgui - for sweet windows
+- dear imgui - for sweet windows
 
-#Project config
+# Project config
 
 1. Set project to x64. From build -> configuration manager.
 2. Set directories for included headers and libraries. For ex. Visual studio -> Solution Explorer -> Properties-> VC++ Directories 
