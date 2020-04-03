@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4f567610-9245-43ec-902b-ec1875a26d93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b2f63cf8-3313-4c87-81e7-00ab6bea4212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IMGUI_H">
+      <UniqueIdentifier>{4094210a-0376-4ab1-9fc6-89ea93453b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GLFW_H">
+      <UniqueIdentifier>{df35effc-0307-45ef-8c38-b7cb79d9982e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imgui_base">
+      <UniqueIdentifier>{24a289d0-1beb-4fab-b6c0-167f32913798}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Dependencies\include\imgui\glad.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imconfig.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imgui.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imgui_impl_glfw.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imgui_internal.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imgui_impl_opengl3.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imstb_rectpack.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imstb_textedit.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\imstb_truetype.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\GLFW\glfw3.h">
+      <Filter>Header Files\GLFW_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\GLFW\glfw3native.h">
+      <Filter>Header Files\GLFW_H</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dependencies\include\imgui\khrplatform.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\glad.c">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui_demo.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui_draw.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui_impl_glfw.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\Dependencies\lib-vc2017\glfw3.lib">
+      <Filter>Source Files\imgui_base</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
