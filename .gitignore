@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 bin/
 
 .vs/
@@ -358,3 +359,12 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/visualstudio
+=======
+
+Lambada/Lambada.sln
+Lambada/.vs/Lambada/v15/Browse.VC.db
+Lambada/.vs/Lambada/v15/Browse.VC.opendb
+Lambada/Lambada/Lambada.vcxproj
+Lambada/Lambada/Lambada.vcxproj.filters
+Lambada/Lambada/Lambada.vcxproj.user
+>>>>>>> beaf64126f895dc606104769b981b3476822f3d9
