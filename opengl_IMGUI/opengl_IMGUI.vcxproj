@@ -21,7 +21,7 @@
   <ItemGroup>
     <ClInclude Include="src\Dependencies\include\GLFW\glfw3.h" />
     <ClInclude Include="src\Dependencies\include\GLFW\glfw3native.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\glad.h" />
+    <ClInclude Include="src\Dependencies\include\glad\glad.h" />
     <ClInclude Include="src\Dependencies\include\imgui\imconfig.h" />
     <ClInclude Include="src\Dependencies\include\imgui\imgui.h" />
     <ClInclude Include="src\Dependencies\include\imgui\imgui_impl_glfw.h" />
@@ -33,7 +33,7 @@
     <ClInclude Include="src\Dependencies\include\imgui\khrplatform.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Dependencies\include\imgui\glad.c" />
+    <ClCompile Include="src\Dependencies\include\glad\glad.c" />
     <ClCompile Include="src\Dependencies\include\imgui\imgui.cpp" />
     <ClCompile Include="src\Dependencies\include\imgui\imgui_demo.cpp" />
     <ClCompile Include="src\Dependencies\include\imgui\imgui_draw.cpp" />

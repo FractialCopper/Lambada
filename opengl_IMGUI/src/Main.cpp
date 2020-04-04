@@ -16,7 +16,7 @@
 #elif defined(IMGUI_IMPL_OPENGL_LOADER_GLEW)
 #include <GL/glew.h>    // Initialize with glewInit()
 #elif defined(IMGUI_IMPL_OPENGL_LOADER_GLAD)
-#include <glad.h>  // Initialize with gladLoadGL()
+#include <glad/glad.h>  // Initialize with gladLoadGL()
 #elif defined(IMGUI_IMPL_OPENGL_LOADER_GLBINDING)
 #define GLFW_INCLUDE_NONE         // GLFW including OpenGL headers causes ambiguity or multiple definition errors.
 #include <glbinding/glbinding.h>  // Initialize with glbinding::initialize()

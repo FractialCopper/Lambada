@@ -22,9 +22,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Dependencies\include\imgui\glad.h">
-      <Filter>Header Files\IMGUI_H</Filter>
-    </ClInclude>
     <ClInclude Include="src\Dependencies\include\imgui\imconfig.h">
       <Filter>Header Files\IMGUI_H</Filter>
     </ClInclude>
@@ -58,13 +55,13 @@
     <ClInclude Include="src\Dependencies\include\imgui\khrplatform.h">
       <Filter>Header Files\IMGUI_H</Filter>
     </ClInclude>
+    <ClInclude Include="src\Dependencies\include\glad\glad.h">
+      <Filter>Header Files\IMGUI_H</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Dependencies\include\imgui\glad.c">
-      <Filter>Source Files\imgui_base</Filter>
     </ClCompile>
     <ClCompile Include="src\Dependencies\include\imgui\imgui.cpp">
       <Filter>Source Files\imgui_base</Filter>
@@ -82,6 +79,9 @@
       <Filter>Source Files\imgui_base</Filter>
     </ClCompile>
     <ClCompile Include="src\Dependencies\include\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\imgui_base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dependencies\include\glad\glad.c">
       <Filter>Source Files\imgui_base</Filter>
     </ClCompile>
   </ItemGroup>
