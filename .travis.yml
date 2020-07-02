@@ -1,5 +1,5 @@
-dist: trusty
-sudo: false
+sudo: required
+dist: precise
 
 language: cpp
 
@@ -7,12 +7,8 @@ compiler:
   - clang
   - gcc
 
-script:
-  - mkdir build
-  - cd build
-  - cmake -D GTEST_ROOT:PATH=$HOME/Lambada/gTest/test.cpp
-  - make
-  - make test
+script: gTest/test.cpp
+  
 
 notifications:
   email: false
