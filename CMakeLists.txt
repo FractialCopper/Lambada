@@ -11,7 +11,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 # set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 
 #----------------------------------------------------------------------------
-# Define project sources and includes
+# Define project sources and includes or not
 #----------------------------------------------------------------------------
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/opengl_IMGUI/Dependencies)
 include_directories(${COMMON_INCLUDES})
