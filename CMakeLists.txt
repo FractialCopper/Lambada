@@ -1,77 +1,41 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required (VERSION 3.1)
 
-# Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.change
-set(PROJECT_NAME project1)
-project(${PROJECT_NAME})
+project (registerer)
 
-set(CMAKE_CXX_FLAGS "-g -Wall")
+##################################
+# Download and install GoogleTest
 
-# If you want your own include/ directory, set this, and then you can do
-# include_directories(${COMMON_INCLUDES}) in other CMakeLists.txt files.
-# set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
+include(ExternalProject)
+ExternalProject_Add(gtest
+  URL https://github.com/google/googletest/archive/release-1.8.0.zip
+  # Comment above line, and uncomment line below to use subversion.
+  # SVN_REPOSITORY http://googletest.googlecode.com/svn/trunk/ 
+  # Uncomment line below to freeze a revision (here the one for 1.7.0)
+  # SVN_REVISION -r700
 
-#----------------------------------------------------------------------------
-# Define project sources and includes or not
-#----------------------------------------------------------------------------
-set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/opengl_IMGUI/Dependencies)
-include_directories(${COMMON_INCLUDES})
-file(GLOB SRC_FILES ${PROJECT_SOURCE_DIR}/opengl_IMGUI/src/*.cpp)
-file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/gTest/*.cpp)
-list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/opengl_IMGUI/src/main.cpp)
+  PREFIX ${CMAKE_CURRENT_BINARY_DIR}/gtest
+  INSTALL_COMMAND ""
+)
+ExternalProject_Get_Property(gtest source_dir binary_dir)
 
-set(CMAKE_CXX_STANDARD 11)
+################
+# Define a test
+add_executable(test test.cpp)
 
-################################
-# Normal Libraries & Executables
-################################
-add_library(project1_lib ${SRC_FILES})
-add_executable(project1 ${PROJECT_SOURCE_DIR}/opengl_IMGUI/src/main.cpp)
-# Key idea: SEPARATE OUT your main() function into its own file so it can be its
-# own executable. Separating out main() means you can add this library to be
-# used elsewhere (e.g linking to the test executable).
+######################################
+# Configure the test to use GoogleTest
+#
+# If used often, could be made a macro.
 
-target_link_libraries(project1 project1_lib)
+add_dependencies(test gtest)
+include_directories(${source_dir}/include)
+target_link_libraries(registerer_test ${binary_dir}/libgtest.a)
+target_link_libraries(registerer_test ${binary_dir}/libgtest_main.a)
 
-################################
-# Testing
-################################
+##################################
+# Just make the test runnable with
+#   $ make test
 
-# Options. Turn on with 'cmake -Dmyvarname=ON'.
-option(BUILD_TESTS "Build all tests." OFF) # Makes boolean 'test' available.
-
-if (BUILD_TESTS)
-  # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(ext/gtest-1.8.0)
-
-  enable_testing()
-
-  # Include the gtest library. gtest_SOURCE_DIR is available due to
-  # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-
-  ##############
-  # Unit Tests
-  ##############
-  add_executable(runUnitTests ${TEST_SRC_FILES})
-
-  # Standard linking to gtest stuff.
-  target_link_libraries(runUnitTests gtest gtest_main)
-
-  # Extra linking for the project.
-  target_link_libraries(runUnitTests project1_lib)
-
-  # This is so you can do 'make test' to see all your tests run, instead of
-  # manually running the executable runUnitTests to see those specific tests.
-  add_test(UnitTests runUnitTests)
-
-  set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/.travis/cmake)
-
-  if (CMAKE_BUILD_TYPE STREQUAL "Coverage")
-    include(CodeCoverage)
-    setup_target_for_coverage(${PROJECT_NAME}_coverage runUnitTests coverage)
-
-    SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
-    SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
-  endif() #CMAKE_BUILD_TYPE STREQUAL "Coverage"
-
-endif()
+enable_testing()
+add_test(NAME    test 
+         COMMAND test)
