@@ -1,4 +1,4 @@
-https://travis-ci.org/FractialCopper/Lambada.svg?branch=master
+[![Build Status](https://travis-ci.org/FractialCopper/Lambada.svg?branch=master)](https://travis-ci.org/FractialCopper/Lambada)
 
 
 https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
