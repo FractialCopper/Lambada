@@ -73,8 +73,8 @@ if (BUILD_TESTS)
   
 
 	
-	
-	target_link_libraries(runUnitTests glfw)
+
+   target_link_libraries(runUnitTests glfw)
 
 
   # This is so you can do 'make test' to see all your tests run, instead of
