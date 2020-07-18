@@ -19,31 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Dependencies\include\GLFW\glfw3.h" />
-    <ClInclude Include="src\Dependencies\include\GLFW\glfw3native.h" />
-    <ClInclude Include="src\Dependencies\include\glad\glad.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imconfig.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imgui.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imgui_impl_glfw.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imgui_impl_opengl3.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imgui_internal.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imstb_rectpack.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imstb_textedit.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\imstb_truetype.h" />
-    <ClInclude Include="src\Dependencies\include\imgui\khrplatform.h" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\imgui.cpp" />
+    <ClCompile Include="src\imgui_demo.cpp" />
+    <ClCompile Include="src\imgui_draw.cpp" />
+    <ClCompile Include="src\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\imgui_widgets.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Dependencies\include\glad\glad.c" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui.cpp" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui_demo.cpp" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui_draw.cpp" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui_impl_glfw.cpp" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="src\Dependencies\include\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="src\Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="src\Dependencies\lib-vc2017\glfw3.lib" />
+    <ClInclude Include="dependencies\glad.h" />
+    <ClInclude Include="dependencies\glfw3.h" />
+    <ClInclude Include="dependencies\glfw3native.h" />
+    <ClInclude Include="dependencies\imconfig.h" />
+    <ClInclude Include="dependencies\imgui.h" />
+    <ClInclude Include="dependencies\imgui_impl_glfw.h" />
+    <ClInclude Include="dependencies\imgui_impl_opengl3.h" />
+    <ClInclude Include="dependencies\imgui_internal.h" />
+    <ClInclude Include="dependencies\imstb_rectpack.h" />
+    <ClInclude Include="dependencies\imstb_textedit.h" />
+    <ClInclude Include="dependencies\imstb_truetype.h" />
+    <ClInclude Include="dependencies\khrplatform.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -142,13 +139,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)opengl_IMGUI\src\Dependencies\Include\imgui;$(SolutionDir)opengl_IMGUI\src\Dependencies\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)opengl_IMGUI\dependencies</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)opengl_IMGUI\src\Dependencies\lib-vc2017</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)opengl_IMGUI\dependencies</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
