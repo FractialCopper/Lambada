@@ -34,7 +34,7 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(${PROJECT_SOURCE_DIR}/opengl_IMGUI/linux/glfw-master)
 
 
-add_executable(Lambada ${SRC}/main ${SRC}/glad ${SRC}/imgui ${SRC}/imgui_demo ${SRC}/imgui_impl_glfw ${SRC}/imgui_impl_opengl3 ${SRC}/imgui_widgets ${SRC}/imgui_draw)
+add_executable(Lambada /opengl_IMGUI/src/main.cpp /opengl_IMGUI/src/glad.c /opengl_IMGUI/src/imgui.cpp /opengl_IMGUI/src/imgui_demo.cpp /opengl_IMGUI/src/imgui_impl_glfw.cpp /opengl_IMGUI/src/imgui_impl_opengl3.cpp /opengl_IMGUI/src/imgui_widgets.cpp /opengl_IMGUI/src/imgui_draw.cpp)
 
 # Key idea: SEPARATE OUT your main() function into its own file so it can be its
 # own executable. Separating out main() means you can add this library to be
