@@ -31,7 +31,7 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 	
-add_subdirectory(${PROJECT_SOURCE_DIR}${PROJECT_SOURCE_DIR}/opengl_IMGUI/linux/glfw-master)
+add_subdirectory(${PROJECT_SOURCE_DIR}/opengl_IMGUI/linux/glfw-master)
 
 
 add_executable(Lambada ${SRC}/main.cpp ${SRC}/glad.c ${SRC}/imgui.cpp ${SRC}/imgui_demo.cpp ${SRC}/imgui_impl_glfw.cpp ${SRC}/imgui_impl_opengl3.cpp ${SRC}/imgui_widgets.cpp ${SRC}/imgui_draw.cpp)
@@ -53,7 +53,7 @@ option(BUILD_TESTS "Build all tests." OFF) # Makes boolean 'test' available.
 
 if (BUILD_TESTS)
   # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(${PROJECT_SOURCE_DIR}/opengl_IMGUI/linux/ext/gtest-1.8.0)
+  add_subdirectory(opengl_IMGUI/linux/ext/gtest-1.8.0)
 
   enable_testing()
 
