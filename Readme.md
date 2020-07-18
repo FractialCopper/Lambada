@@ -1,3 +1,6 @@
+https://travis-ci.org/FractialCopper/Lambada.svg?branch=master
+
+
 https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
 
 # LambadaPlayer
