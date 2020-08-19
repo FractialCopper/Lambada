@@ -1,18 +1,27 @@
 #include <stdio.h>
 #include <stdexcept>
-#include "graphicEngine.h"
+
+// include OpenGL functionalities
+#include <glad.h>  // Initialize with gladLoadGL()
+#include <glfw3.h>
+
+// [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
+// To link with VS2010-era libraries, VS2015+ requires linking with legacy_stdio_definitions.lib, which we do using this pragma.
+// Your own project should not be affected, as you are likely to link with a newer binary of GLFW that is adequate for your version of Visual Studio.
+#if defined(_MSC_VER) && (_MSC_VER >= 1900) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS)
+#pragma comment(lib, "legacy_stdio_definitions")
+#endif
+
+#include "playerEngine.h"
+#include "gui.h"
+
 
 static void glfw_error_callback(int error, const char* description)
 {
 	fprintf(stderr, "Glfw Error %d: %s\n", error, description);
 }
 
-GraphicEngine::GraphicEngine()
-{
-	gl_init();
-}
-
-void GraphicEngine::gl_init()
+PlayerEngine::PlayerEngine()
 {
 	// Setup window
 	glfwSetErrorCallback(glfw_error_callback);
@@ -50,10 +59,27 @@ void GraphicEngine::gl_init()
 		fprintf(stderr, "Failed to initialize OpenGL loader!\n");
 		throw std::runtime_error("OpenGL loader init error");
 	}
+
+	// Gui setup
+	gui = new Gui(this);
 }
 
-GraphicEngine::~GraphicEngine()
+PlayerEngine::~PlayerEngine()
 {
+	delete gui;
+
 	glfwDestroyWindow(window);
 	glfwTerminate();
+}
+
+// Main player loop
+void PlayerEngine::loop()
+{
+	while (!glfwWindowShouldClose(window))
+	{
+		gui->demoDraw();	// draw demo examples from imgui github
+		gui->render();
+
+		glfwSwapBuffers(window);
+	}
 }

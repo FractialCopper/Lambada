@@ -1,21 +1,18 @@
+#include <glfw3.h>
+
+// dear imgui: standalone example application for GLFW + OpenGL 3, using programmable pipeline
+// If you are new to dear imgui, see examples/README.txt and documentation at the top of imgui.cpp.
+// (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan/Metal graphics context creation, etc.)
+//dumbcomment
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include "gui.h"
-#include "graphicEngine.h"
+#include "playerEngine.h"
 
-Gui::Gui(GraphicEngine* eng)
+Gui::Gui(PlayerEngine* eng)
 	: engine{ eng }
-{
-	imgui_init();
-}
-
-Gui::~Gui()
-{
-	// Cleanup
-	ImGui_ImplOpenGL3_Shutdown();
-	ImGui_ImplGlfw_Shutdown();
-	ImGui::DestroyContext();
-}
-
-void Gui::imgui_init()
 {
 	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();
@@ -46,6 +43,14 @@ void Gui::imgui_init()
 	//io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
 	//ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
 	//IM_ASSERT(font != NULL);
+}
+
+Gui::~Gui()
+{
+	// Cleanup
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
 }
 
 // Our state
