@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\gui.cpp" />
     <ClCompile Include="src\imgui.cpp" />
     <ClCompile Include="src\imgui_demo.cpp" />
     <ClCompile Include="src\imgui_draw.cpp" />
@@ -27,11 +28,13 @@
     <ClCompile Include="src\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\imgui_widgets.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\playerEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\glad.h" />
     <ClInclude Include="dependencies\glfw3.h" />
     <ClInclude Include="dependencies\glfw3native.h" />
+    <ClInclude Include="dependencies\gui.h" />
     <ClInclude Include="dependencies\imconfig.h" />
     <ClInclude Include="dependencies\imgui.h" />
     <ClInclude Include="dependencies\imgui_impl_glfw.h" />
@@ -41,6 +44,7 @@
     <ClInclude Include="dependencies\imstb_textedit.h" />
     <ClInclude Include="dependencies\imstb_truetype.h" />
     <ClInclude Include="dependencies\khrplatform.h" />
+    <ClInclude Include="dependencies\playerEngine.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
