@@ -34,7 +34,7 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(${PROJECT_SOURCE_DIR}/opengl_IMGUI/linux/glfw-master)
 
 
-add_executable(${SRC_FILES})
+add_executable(Lambada ${SRC_FILES})
 
 # Key idea: SEPARATE OUT your main() function into its own file so it can be its
 # own executable. Separating out main() means you can add this library to be
