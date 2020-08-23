@@ -1,23 +1,13 @@
 
 #new ignore for ffmpeg dlls
 
-bin_opengl_IMGUI/intermediates_obj
+bin_opengl_IMGUI/
 
-bin_opengl_IMGUI/final_exe/x64/Debug/*.exe
-bin_opengl_IMGUI/final_exe/x64/Debug/*.ilk
-bin_opengl_IMGUI/final_exe/x64/Debug/*.pdb
+!bin_opengl_IMGUI/final_exe/x64/Debug/*.dll
+!bin_opengl_IMGUI/final_exe/x64/Release/*.dll
+!bin_opengl_IMGUI/final_exe/x86/Debug/*.dll
+!bin_opengl_IMGUI/final_exe/x86/Release/*.dll
 
-bin_opengl_IMGUI/final_exe/x64/Release/*.exe
-bin_opengl_IMGUI/final_exe/x64/Release/*.ilk
-bin_opengl_IMGUI/final_exe/x64/Release/*.pdb
-
-bin_opengl_IMGUI/final_exe/x86/Debug/*.exe
-bin_opengl_IMGUI/final_exe/x86/Debug/*.ilk
-bin_opengl_IMGUI/final_exe/x86/Debug/*.pdb
-
-bin_opengl_IMGUI/final_exe/x86/Release/*.exe
-bin_opengl_IMGUI/final_exe/x86/Release/*.ilk
-bin_opengl_IMGUI/final_exe/x86/Release/*.pdb
 #end
 
 
