@@ -1,6 +1,9 @@
 [![Build Status](https://travis-ci.org/FractialCopper/Lambada.svg?branch=master)](https://travis-ci.org/FractialCopper/Lambada)
 
 
+You have to download zeranoe shared build from https://ffmpeg.zeranoe.com/builds/  and paste all .dll files in the same folder as .exe.
+
+
 https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
 
 # LambadaPlayer
