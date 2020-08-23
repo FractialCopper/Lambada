@@ -1,6 +1,27 @@
-<<<<<<< HEAD
+
+#new ignore for ffmpeg dlls
+
+bin_opengl_IMGUI/intermediates_obj
+
+bin_opengl_IMGUI/final_exe/x64/Debug/*.exe
+bin_opengl_IMGUI/final_exe/x64/Debug/*.ilk
+bin_opengl_IMGUI/final_exe/x64/Debug/*.pdb
+
+bin_opengl_IMGUI/final_exe/x64/Release/*.exe
+bin_opengl_IMGUI/final_exe/x64/Release/*.ilk
+bin_opengl_IMGUI/final_exe/x64/Release/*.pdb
+
+bin_opengl_IMGUI/final_exe/x86/Debug/*.exe
+bin_opengl_IMGUI/final_exe/x86/Debug/*.ilk
+bin_opengl_IMGUI/final_exe/x86/Debug/*.pdb
+
+bin_opengl_IMGUI/final_exe/x86/Release/*.exe
+bin_opengl_IMGUI/final_exe/x86/Release/*.ilk
+bin_opengl_IMGUI/final_exe/x86/Release/*.pdb
+#end
+
+
 bin_gTest/
-bin_opengl_IMGUI/
 packages/
 #opengl_IMGUI/opengl_IMGUI.vcxproj
 #gTest/gTest.vcxproj
