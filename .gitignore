@@ -1,6 +1,17 @@
-<<<<<<< HEAD
+
+#new ignore for ffmpeg dlls
+
+bin_opengl_IMGUI/intermediates_obj/*
+bin_opengl_IMGUI/final_exe/x64/Debug/*
+!bin_opengl_IMGUI/final_exe/x64/Debug/*.dll
+!bin_opengl_IMGUI/final_exe/x64/Release/*.dll
+!bin_opengl_IMGUI/final_exe/x86/Debug/*.dll
+!bin_opengl_IMGUI/final_exe/x86/Release/*.dll
+
+#end
+
+
 bin_gTest/
-bin_opengl_IMGUI/
 packages/
 #opengl_IMGUI/opengl_IMGUI.vcxproj
 #gTest/gTest.vcxproj
@@ -32,11 +43,11 @@ packages/
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+#[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
+#x64/
 x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
